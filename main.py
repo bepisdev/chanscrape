@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 import argparse
 from rich.progress import Progress
 
-
 def get_media_urls_from_4chan_thread(url):
     response = requests.get(url)
     html_content = response.text
@@ -13,7 +12,7 @@ def get_media_urls_from_4chan_thread(url):
     for file_info in soup.find_all("div", class_="fileText"):
         file_link = file_info.find("a")
         if file_link is not None:
-            media_urls.append("https:" + file_link.get("href"))
+            media_urls.append(f"https:{file_link.get("href")}")
     return media_urls
 
 
