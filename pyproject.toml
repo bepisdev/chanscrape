@@ -33,6 +33,7 @@ test_requires = [
 
 [tool.briefcase.app.chanscrape.macOS]
 universal_build = true
+icon = "resources/icon"
 requires = [
     "toga-cocoa~=0.5.0",
     "std-nslog~=1.0.3",
@@ -165,6 +166,7 @@ flatpak_runtime_version = "48"
 flatpak_sdk = "org.gnome.Sdk"
 
 [tool.briefcase.app.chanscrape.windows]
+icon = "resources/icon"
 requires = [
     "toga-winforms~=0.5.0",
 ]
